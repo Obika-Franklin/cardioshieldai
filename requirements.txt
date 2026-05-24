@@ -1,0 +1,13 @@
+streamlit
+scikit-learn
+xgboost
+imbalanced-learn
+joblib
+tensorflow
+Pillow
+numpy
+pandas
+plotly
+shap
+opencv-python-headless
+gdown
