@@ -25,8 +25,8 @@ logger = logging.getLogger("cardioshield-ml")
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPT_DIR.parent.parent
-MODELS_DIR = PROJECT_ROOT / "models"
+# Instead of searching deep in the monorepo root, create a local models directory
+MODELS_DIR = SCRIPT_DIR / "models"
 
 RF_MODEL_PATH    = MODELS_DIR / "rf_model.pkl"
 PREPROCESSOR_PATH= MODELS_DIR / "preprocessor.pkl"
@@ -568,5 +568,5 @@ def predict_ecg(data: EcgImageRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.environ.get("ML_PORT", 8008))
+    port = int(os.environ.get("PORT", 8008)) 
     uvicorn.run(app, host="0.0.0.0", port=port, log_level="info")
