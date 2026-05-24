@@ -3,7 +3,7 @@ import { anthropic } from "@workspace/integrations-anthropic-ai";
 
 const router: IRouter = Router();
 
-const ML_SERVICE_URL = `http://localhost:${process.env.ML_PORT || 8008}`;
+const ML_SERVICE_URL = process.env.PYTHON_ML_SERVICE_URL || `http://localhost:8008`;
 const ML_TIMEOUT_MS  = 30_000; // 30s — TF inference can be slow on CPU
 
 // ── Dataset metadata ──────────────────────────────────────────────────────────
