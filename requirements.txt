@@ -3,7 +3,7 @@ scikit-learn
 xgboost
 imbalanced-learn
 joblib
-tensorflow
+tensorflow-cpu
 Pillow
 numpy
 pandas
