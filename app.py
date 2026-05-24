@@ -446,6 +446,3 @@ elif page == "ℹ️ About":
     """, unsafe_allow_html=True)
 
     st.error("⚠️ Disclaimer: CardioSense AI is built for educational and research purposes only. It is not a certified medical device and should never be used as a substitute for professional clinical diagnosis.")
-```
-
----
